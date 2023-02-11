@@ -14,7 +14,7 @@
 
 # **iipc**
 
-**iipc is a simple Inter Process Communication for nodejs built on [ws](#https://www.npmjs.com/package/ws) to communicate between processes safely and easily using tcp and websocket, You can also return data to the client see ([example](#example))**
+**iipc is a simple Inter Process Communication for nodejs built on [ws](https://www.npmjs.com/package/ws) to communicate between processes safely and easily using tcp and websocket, You can also return data to the client see ([example](#example))**
 
 # **Important:**
 
