@@ -3,7 +3,7 @@ declare module "iipc" {
     res: any;
     resolve: (data: any) => void;
   }
-  type events = "receive";
+  type events = "receive" | "listening";
   export class ipc {
     /**
      *

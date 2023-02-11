@@ -2,8 +2,14 @@
   <p>
  <a href="https://www.npmjs.com/package/iipc"><img src="https://img.shields.io/npm/v/iipc.svg?style=for-the-badge" alt="NPM version" /></a>
  <a href="https://www.npmjs.com/package/iipc"><img src="https://img.shields.io/npm/dt/iipc.svg?maxAge=3600&style=for-the-badge" alt="NPM downloads" /></a>
+ <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
+ <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="windows" />
+ <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0" alt="macos" />
+  <img src="https://img.shields.io/badge/WS-black?style=for-the-badge&logo=WebStorm&badgeColor=010101" alt="websooket" />
+    <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="websooket" />
   <a href="https://www.npmjs.com/package/iipc"><img src="https://img.shields.io/npm/l/iipc.svg?maxAge=3600&style=for-the-badge" alt="license" /></a>
   </p>
+  
 </div>
 
 # **iipc**
@@ -24,15 +30,13 @@
 sudo apt-get install net-tools
 ```
 
-**then**
-
 ```sh-session
 npm install iipc
 yarn add iipc
 ```
 
 # **Windows**
-
+**Tested on Windows 10**
 ```sh-session
 npm install iipc
 yarn add iipc
@@ -42,7 +46,6 @@ yarn add iipc
 
 **Not Tested on MacOS, but we hope it works if your device is a MacOS, please let us know if it works**
 
-
 # Example
 
 ## index.js process 1
@@ -50,7 +53,9 @@ yarn add iipc
 ```js
 const { ipc } = require("iipc");
 const $ = new ipc("test"); // This is the secret that will be used to authenticate the client
-
+$.on("listening", () => {
+  console.log("IPC IS ON! Enjoy");
+});
 //custom port use: new ipc(8080);
 $.on("receive", ({ res, resolve }) => {
   console.log(res); //Hello
@@ -59,7 +64,7 @@ $.on("receive", ({ res, resolve }) => {
 
   //if you don't use resolve, the client will wait forever and promise will never resolve
 });
-````
+```
 
 ## client.js process 2
 
