@@ -1,7 +1,7 @@
 {
   "name": "iipc",
   "author": "Arth",
-  "version": "0.0.1",
+  "version": "0.0.1-b",
   "description": "iipc is a simple Inter Process Communication for nodejs to communicate between processes safely and easily using tcp and websocket.",
   "main": "index.js",
   "scripts": {
